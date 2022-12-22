@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import DataButton from "./dataButton";
 import Image from "next/image";
+import Navbar from "../navbar";
 
 export class UserType {
   id: number = 0;
@@ -63,6 +64,7 @@ export default function Data() {
 
   return (
     <div>
+      <Navbar />
       {data.map((element) => {
         return (
           <DataButton

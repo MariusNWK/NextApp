@@ -1,7 +1,7 @@
 "use client";
 
 import { Dispatch, SetStateAction } from "react";
-import { UserType, getData, PhotoType } from "./data";
+import { UserType, getData, PhotoType } from "./page";
 import { Inter, Montserrat } from "@next/font/google";
 
 const montserrat = Montserrat({
