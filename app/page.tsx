@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Navbar from "./navbar";
 import LinkButton from "./linkbutton";
+import TestHome from "./testHome";
 
 export default function Home() {
   const linkpages = [
@@ -24,6 +25,7 @@ export default function Home() {
       {linkpages.map((link) => {
         return <LinkButton key={link.id} title={link.title} url={link.url} />;
       })}
+      <TestHome />
     </main>
   );
 }
