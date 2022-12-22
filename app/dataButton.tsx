@@ -2,6 +2,12 @@
 
 import { Dispatch, SetStateAction } from "react";
 import { UserType, getData, PhotoType } from "./data";
+import { Inter, Montserrat } from "@next/font/google";
+
+const montserrat = Montserrat({
+  weight: "500",
+  subsets: ["latin"],
+});
 
 interface dataButtonsProps {
   element: UserType;
@@ -25,7 +31,10 @@ export default function DataButton({
   }
 
   return (
-    <button onClick={() => handleOnClick(element.id)}>
+    <button
+      onClick={() => handleOnClick(element.id)}
+      className={montserrat.className}
+    >
       <h1>{element.name}</h1>
       <h2>{element.email}</h2>
     </button>
