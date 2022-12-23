@@ -1,6 +1,12 @@
+import { RequestCookie } from "next/dist/server/web/spec-extension/cookies/types";
 import Link from "next/link";
+import LoggedNavbar from "./loggednavbar";
 
-export default function Navbar() {
+interface NavbarProps {
+  user: RequestCookie | undefined;
+}
+
+export default function Navbar({ user }: NavbarProps) {
   return (
     <nav>
       <ul>
@@ -19,6 +25,7 @@ export default function Navbar() {
             <button>Login</button>
           </Link>
         </li>
+        <LoggedNavbar user={user}/>
       </ul>
     </nav>
   );

@@ -70,6 +70,7 @@ export default function Login({ user }: LoginProps) {
         const cookies = new Cookies();
         cookies.set('user', username, { path: '/' });
         setIsLoggedIn(true);
+        window.location.reload();
       } catch (error) {
         console.error(error);
       }
@@ -81,6 +82,7 @@ export default function Login({ user }: LoginProps) {
     const cookies = new Cookies();
     setIsLoggedIn(false);
     cookies.remove('user', { path: '/' });
+    window.location.reload();
   }
 
   if (user?.value && isLoggedIn) {

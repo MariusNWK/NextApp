@@ -8,7 +8,7 @@ export default function Login() {
 
   return (
     <div>
-      <Navbar />
+      <Navbar user={user} />
       <InfoUser user={user}/>
     </div>
   );
