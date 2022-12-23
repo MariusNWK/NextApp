@@ -59,7 +59,8 @@ export default function Login({ user }: LoginProps) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(user?.value);
+  const defaultLoggedStatus = user?.value ? true : false;
+  const [isLoggedIn, setIsLoggedIn] = useState(defaultLoggedStatus);
 
   const handleLogin = () => {
     setLoading(true);
